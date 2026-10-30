@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+    transition: background-color 350ms cubic-bezier(0.16, 1, 0.3, 1), color 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  html.dark, body.dark {
+    color: #f1f5f9;
+    background-color: #070d18;
+  }
+  
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Comprehensive Dark Mode Theme Tokens */
+html.dark .bg-white {
+  background-color: #0f172a !important;
+  color: #f8fafc;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #172033 !important;
+  color: #f1f5f9;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #1e293b !important;
+  color: #f1f5f9;
+}
+
+html.dark .border-slate-200, 
+html.dark .border-slate-100 {
+  border-color: #1e293b !important;
+}
+
+html.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark input, 
+html.dark select {
+  background-color: #172033 !important;
+  border-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+/* Smooth blur transition effect when switching theme */
+.theme-blur-active {
+  animation: themeBlurAnimation 420ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes themeBlurAnimation {
+  0% {
+    filter: blur(0px);
+  }
+  40% {
+    filter: blur(8px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+/* Custom scrollbars & print styles for Certificado */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #induction-certificate, #induction-certificate * {
+    visibility: visible;
+  }
+  #induction-certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-shadow: none !important;
+  }
+}

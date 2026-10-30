@@ -1,0 +1,6 @@
+{
+  "name": "SENA Inducción Digital - Gestión y Evaluación de Aprendices",
+  "description": "Plataforma institucional interactiva de inducción SENA: valores e identidad, derechos y deberes según el reglamento del aprendiz, simulador de casos y evaluación diagnóstica de apropiación con constancia digital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
